@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.page-wrapper {
+
+    background-color: #32363d;
+
+}
+.content {
+    width: 80%;
+    height: calc(100vh - 130px);
+    margin: 0 auto;
+}
+header {
+    height: 70px;
+    border-bottom: 1px solid #797b80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #797b80;
+}
+footer {
+    height: 60px;
+    border-top: 1px solid #797b80;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+a {
+    color: #797b80;
+}
+a:hover {
+    color: #8a898c;
+}
+
+.options {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #797b80;
+    border-right: 1px solid #797b80;
+    border-left: 1px solid #797b80;
+    text-align: center;
+}
+.single-option {
+    display: flex;
+    align-items: center;
+}
+.chechboxes-wrapper {
+    height: calc(100% - 50px);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.chechboxes {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.chechboxes::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: #797b80;
+    width: 1px;
+    left: 50%;
+}
+.chechboxes-left {
+    height: 100%;
+    width: 50%;
+    overflow-y: auto;
+
+}
+.chechboxes-right {
+    height: 100%;
+    width: 50%;
+    overflow-y: auto;
+
+}
+
+.single-chb {
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    width: 49%;
+
+}
+.single-chb .chb-title {
+    margin-left: 21px;
+    font-size: 17px;
+    color: #797b80;
+}
+.single-chb input {
+    display: none;
+}
+.single-chb input:checked + .custom-checkbox {
+    background-color: #797b80;
+}
+.single-chb input:checked + .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 7px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.custom-checkbox {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #eee;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    cursor: pointer;
+
+}
+
+.chb-title-right {
+    margin-left: 0px !important;
+    margin-right: 21px;
+}
+.single-chb-right {
+    text-align: right;
+}
+.custom-checkbox-right {
+    left: auto !important;
+    right: 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .single-chb {
+        width: 100%;
+    }
+    .single-option {
+        font-size: 13px;
+    }
+}
