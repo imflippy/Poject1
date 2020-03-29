@@ -1,2 +1,2 @@
-# Poject1
+# Project1
 Simple Array Manipulation
